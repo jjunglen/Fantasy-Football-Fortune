@@ -10,5 +10,19 @@ const playerOutcome = {
     strengthOfThisOutcome: ['100%', '75%', '50%', '25%', '0%']
 }
 
+// Empty array
+let fantasyFortune = [];
+
+// iterate over the object to get the results
+for(let random in playerOutcome) {
+    let index = randomNumberGen(playerOutcome[random].length);
+
+    // customize the outcome
+    switch(random) {
+        case 'players':
+
+    }
+}
+
 randomNumberGen(10);
 
