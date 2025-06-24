@@ -14,15 +14,15 @@ const playerOutcome = {
 let fantasyFortune = [];
 
 // iterate over the object to get the results
-for(let random in playerOutcome) {
-    let index = randomNumberGen(playerOutcome[random].length);
+for (let i = 0; i < playerOutcome.players.length; i++) {
+    let player = playerOutcome.players[i];
+    let outcomeIndex = randomNumberGen(playerOutcome.outcomes.length);
+    let strengthIndex = randomNumberGen(playerOutcome.strengthOfThisOutcome.length);
 
-    // customize the outcome
-    switch(random) {
-        case 'players':
-
-    }
+    // Create a fortune for the player
+    let fortune = `Player: ${player}, Outcome: ${playerOutcome.outcomes[outcomeIndex]}, Confidence: ${playerOutcome.strengthOfThisOutcome[strengthIndex]}`;
+    fantasyFortune.push(fortune);
 }
 
-randomNumberGen(10);
+console.log(fantasyFortune);
 
